@@ -1,0 +1,17 @@
+{
+  "name": "smith-elite-training",
+  "version": "1.0.0",
+  "description": "![Logo of the Project](/img/banner.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i input.css -o css/main.css",
+    "watch": "npx tailwindcss -i input.css -o css/main.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}

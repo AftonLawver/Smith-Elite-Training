@@ -1,5 +1,5 @@
 
-![Logo of the Project](/img/smith_elite_training.png)
+![Logo of the Project](/img/banner.png)
 
 ---
 

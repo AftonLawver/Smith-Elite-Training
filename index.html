@@ -5,16 +5,31 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/bootstrap_src/bootstrap.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/smith_elite_training_logo.jpg">
+    <title>Personal Trainer in Southern Wisconsin | Javen Smith </title>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container">
-            <a href="#" class="navbar-brand"><img src="/img/smith_elite_training_logo.jpg" width="50" height="50"></a>
+<!--Navbar -->
+<nav class="relative container mx-auto">
+    <div class="flex items-center justify-between">
+        <div class="pt-2">
+            <img class="w-28 h-auto" src="img/smith_elite_training_logo.jpg" alt="">
         </div>
-    </nav>
-    <script type="text/javascript" src="bootstrap_src/bootstrap.min.js" ></script>
+        <!--            Menu Items -->
+        <div class=" font-medium hidden md:flex space-x-6">
+            <a href="#" class="hover:text-gray-600">About Me</a>
+            <a href="#" class="hover:text-gray-600">Services</a>
+            <a href="#" class="hover:text-gray-600">Testimonials</a>
+            <a href="#" class="hover:text-gray-600">FAQ</a>
+            <a href="#" class="hover:text-gray-600">Contact Me</a>
+        </div>
+<!--        Button -->
+        <a href="#" class="hidden md:block p-3 px-6 pt-2 text-white bg-red-700 rounded-full baseline hover:bg-lightRed">
+            Get Started
+        </a>
+
+    </div>
+</nav>
 </body>
 </html>
