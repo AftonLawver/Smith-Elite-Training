@@ -1,0 +1,89 @@
+@import 'utilities';
+@import 'config';
+
+* {
+    font-family: $font-stack;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .item-1 {
+        display: flex;
+
+        i {
+            color: $dark-color;
+            padding: 0 5px;
+        }
+
+        i:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .item-2 {
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+    }
+
+    .item-3 {
+        visibility: hidden;
+    }
+
+    @media (max-width: 768px) {
+        .item-3 {
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        .item-3:hover {
+            color: $secondary-color;
+        }
+      }
+}
+
+.flex-container-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        visibility: hidden;
+      }
+
+
+
+    a {
+        text-decoration: none;
+        color: $dark-color;
+        font-weight: bold;
+        padding: 0 10px;
+        text-transform: uppercase;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: $secondary-color;
+    }
+
+    
+
+    
+}
+
+
+
+
+
+
+
+
