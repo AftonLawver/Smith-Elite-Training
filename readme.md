@@ -12,6 +12,7 @@
 
 
 ### Features in Progress
+- Implement sidebar navigation for mobile devices.
 
 
 **Gif**
