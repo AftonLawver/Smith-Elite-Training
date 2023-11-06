@@ -14,10 +14,18 @@
     background-color: $primary-color;
     color: $dark-color;
 
+    &:hover {
+        cursor: pointer;
+    }
+
 }
 
 .btn-secondary {
     @extend %btn;
     background-color: $secondary-color;
     color: $light-color;
+
+    &:hover {
+        cursor: pointer;
+    }
 }

@@ -2,6 +2,13 @@
 
     .flex-container {
 
+        .item-1 {
+
+            i {
+                font-size: 24px;
+            }
+        }
+
         .item-3 {
             visibility: visible;
             cursor: pointer;
@@ -20,11 +27,16 @@
         flex-direction: column-reverse;
 
         .item-1 {
-            width: 75%;
+            width: 60%;
+            text-align: center;
+
+            h1 {
+                font-size: 36px;
+            }
         }
 
         .item-2 {
-            width: 75%;
+            width: 60%;
             }
         }
 }

@@ -18,7 +18,6 @@ body {
     justify-content: space-between;
     align-items: center;
 
-
     .item-1 {
         display: flex;
 
@@ -45,7 +44,7 @@ body {
 
     .item-3 {
         visibility: hidden;
-        padding-right: 50px;
+        padding-right: 25px;
     }
 }
 
@@ -101,7 +100,7 @@ body {
         width: 40%;
 
         img {
-            width: 90%;
+            width: 100%;
             height: auto;
         }
     }
@@ -129,6 +128,10 @@ body {
    a {
     color: $primary-color;
     text-decoration: none;
+
+    &:hover {
+        opacity: 0.8;
+    }
    }
 }
 
@@ -153,10 +156,33 @@ body {
         padding: 0px 5px;
         text-decoration: none;
 
+        &:hover {
+            opacity: 0.8;
+        }
+
     }
 
     p {
         margin: 5px 0;
+    }
+}
+
+#contact {
+    text-align: center;
+
+    h3 {
+        color: $primary-color;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        line-height: 1.5rem;
+    }
+
+    hr {
+        width: 40%;
+    }
+
+    #inquiryForm {
+        padding-bottom: 20px;
     }
 }
 
