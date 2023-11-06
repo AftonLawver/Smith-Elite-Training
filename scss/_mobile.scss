@@ -1,0 +1,30 @@
+@media(max-width: 768px) {
+
+    .flex-container {
+
+        .item-3 {
+            visibility: visible;
+            cursor: pointer;
+        }
+
+        .item-3:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .flex-container-2 {
+        visibility: hidden;
+    }
+
+    .flex-container-3 {
+        flex-direction: column-reverse;
+
+        .item-1 {
+            width: 75%;
+        }
+
+        .item-2 {
+            width: 75%;
+            }
+        }
+}

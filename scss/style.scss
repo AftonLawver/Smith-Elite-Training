@@ -1,12 +1,16 @@
-@import 'utilities';
 @import 'config';
 
 * {
     font-family: $font-stack;
 }
 
+html {
+    height: 100%; 
+}
+
 body {
     margin: 0;
+    height: 100%;
 }
 
 .flex-container {
@@ -41,18 +45,8 @@ body {
 
     .item-3 {
         visibility: hidden;
+        padding-right: 50px;
     }
-
-    @media (max-width: 768px) {
-        .item-3 {
-            visibility: visible;
-            cursor: pointer;
-        }
-
-        .item-3:hover {
-            color: $secondary-color;
-        }
-      }
 }
 
 .flex-container-2 {
@@ -61,10 +55,7 @@ body {
     align-items: center;
     padding-bottom: 20px;
 
-    @media (max-width: 768px) {
-        visibility: hidden;
-      }
-
+   
     a {
         text-decoration: none;
         color: $dark-color;
@@ -90,25 +81,11 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: 768px) {
-        flex-direction: column-reverse;
-    }
-
-
     .item-1 {
         width: 60%;
 
-        @media (max-width: 768px) {
-            width: 90%;
-        }
         a {
             text-decoration: none;
-            background-color: $primary-color;
-            color: $dark-color;
-            display: inline-block;
-            border-radius: 5px;
-            padding: 8px 20px;
-            margin: 3px;
         }
 
         a:hover {
@@ -123,10 +100,6 @@ body {
     .item-2 {
         width: 40%;
 
-        @media (max-width: 768px) {
-            width: 80%;
-        }
-
         img {
             width: 90%;
             height: auto;
@@ -134,20 +107,60 @@ body {
     }
 }
 
-.footer {
-    background-color: $dark-color;
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
+    text-align: center;
+    background-color: $dark-color;
+    color: $light-color;
+    display: inline;
 
-    .footer-desc {
-        color: $light-color;
-        text-align: center;
+   a {
+    color: $primary-color;
+    text-decoration: none;
+   }
+}
+
+#top-footer {
+    padding: 10px 0;
+    width: 100%;
+    background-color: $primary-color;
+    color: $light-color;
+    text-align: center;
+
+    #logo {
+        width: 10%;
+        height: auto;
+    }
+
+    #company-name {
+        font-weight: bold;
     }
 
     a {
+        color: $light-color;
+        padding: 0px 5px;
         text-decoration: none;
-        color: $primary-color;
+
+    }
+
+    p {
+        margin: 5px 0;
     }
 }
+
+
+@import 'buttons';
+@import 'mobile';
+@import 'utilities';
