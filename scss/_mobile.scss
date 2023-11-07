@@ -17,6 +17,47 @@
         .item-3:hover {
             color: $secondary-color;
         }
+
+        #sidemenu {
+            margin-top: 0;
+            background-color: $secondary-color;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: -300px;
+            width: 100%;
+            z-index: 2;
+            transition: top 0.5s;
+            padding: 30px 0 20px 0;
+            text-align: center;
+
+            li { 
+                list-style-type: none;
+                padding-bottom: 10px;
+                
+                a {
+                    text-decoration: none;
+                    color: $light-color;
+
+                    &:hover {
+                        color: lighten($primary-color, 10%);
+                    }
+                }                
+            }
+
+            .fa-xmark {
+                cursor: pointer;
+                top: 25px;
+                color: $light-color;
+                margin-bottom: 25px;
+
+                &:hover {
+                    color: lighten($primary-color, 10%);
+                }
+
+            }
+            
+        }
     }
 
     .flex-container-2 {
