@@ -20,7 +20,7 @@
     }
 
     .flex-container-2 {
-        visibility: hidden;
+        display: none;
     }
 
     .flex-container-3 {
@@ -38,5 +38,33 @@
         .item-2 {
             width: 60%;
             }
+    }
+
+    #contact {
+        #inquiryForm {
+            margin: 0px 1vw 10px 1vw;
+
+            #formTextArea {
+                width: 70%;
+                margin: auto;
+            }
         }
+    }
+
+    #top-footer {
+
+        #logo {
+            width: 20%;
+        }
+    }
+
+    #footer {
+
+        .footer-desc {
+            font-size: 10px;
+        }
+    }
+    
+
+
 }

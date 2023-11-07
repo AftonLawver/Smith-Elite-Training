@@ -59,10 +59,10 @@
                             Things we will do in our consultation
                         </p>
                         <hr>
-                        <ul>
+                        <ul class="custom-list">
                             <li>Assess your goals</li>
                             <li>Understand your current fitness level</li>
-                            <li>Discuss any current or previous medical hsitory</li>
+                            <li>Discuss any previous medical history</li>
                             <li>Learn about my expertise</li>
                             <li>Explore training options</li>
                         </ul>
@@ -71,13 +71,20 @@
                         <input class="custom-input" id="firstNameInput" type="text" placeholder="John Smith" name="name" onkeyup="validateName()">
                         <p class="error" id="firstNameErrorMessage"></p>
                         
+                        <label for="phoneInput">Phone</label>
+                        <input class="custom-input" id="phoneNumberInput" type="text" placeholder="(999)-123-4321" name="phone" onkeyup="validatePhone()">
+                        <p class="error" id="phoneNumberErrorMessage"></p>
                         
+                        <textarea
+                              id="formTextArea"
+                              rows="4"
+                              placeholder="Type comments or questions here"></textarea>
                         
                         
                         <div id="buttons">
-                            <button class="btn-primary" id="sendInquiryButton">Create Account</button>
+                            <button class="btn-primary" id="sendInquiryButton">Submit</button>
                             <input class="btn-primary" id="resetButton" type="reset"
-                                   name="clear" value="Clear Form"/>
+                                   name="clear" value="Clear"/>
                         </div>
                     </form>
                 </div>

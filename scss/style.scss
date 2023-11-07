@@ -159,7 +159,6 @@ body {
         &:hover {
             opacity: 0.8;
         }
-
     }
 
     p {
@@ -181,8 +180,33 @@ body {
         width: 40%;
     }
 
+    .custom-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .custom-list li {
+        margin: auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    .custom-list li::before {
+        content: "\2022";
+        color: black;
+        margin-right: 8px;
+    }
+
     #inquiryForm {
-        padding-bottom: 20px;
+        margin: 0px 10vw 15px 10vw;
+        padding: 20px;
+        border-radius: 5px;
+        border: 2px solid $primary-color;
+
+        #formTextArea {
+            width: 40%;
+            margin: auto;
+        }
     }
 }
 
