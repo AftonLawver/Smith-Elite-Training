@@ -202,15 +202,59 @@ body {
     }
 
     #inquiryForm {
-        margin: 0px 10vw 15px 10vw;
-        padding: 20px;
         border-radius: 5px;
         border: 2px solid $primary-color;
+        padding: 5px;
+        max-width: 600px;
+        margin: 10px auto;
+        background-color: lighten($secondary-color, 45%);
 
-        #formTextArea {
-            width: 40%;
-            margin: auto;
+        .flex-container-form {
+            flex-direction: column;
+
+            .label-and-input {
+                text-align: center;
+            }
         }
+        
+        #formTextArea {
+            width: 50%;
+            display: block;
+            margin: 10px auto;
+        }
+        
+        label, input {
+            display: inline-block;
+
+        }
+        
+        label {
+            font-size: 16px;
+            width: 50px;
+            text-align: right;
+        }
+        
+        .custom-input {
+            all: unset;
+            border: 2px solid grey;
+            background: white;
+            color: black;
+            padding: 2px;
+            border-radius: 2px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 40%;
+        }
+        
+        .error {
+            display: none;
+            font-size: 12px;
+            color: red;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
     }
 }
 
