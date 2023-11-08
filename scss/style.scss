@@ -215,8 +215,8 @@ body {
 }
 
 #testimonials {
-
     text-align: center;
+    padding-bottom: 10px;
 
     hr {
         width: 40%;
@@ -297,6 +297,65 @@ body {
     .content {
         padding-bottom: 10px;
     }
+}
+
+#services {
+    text-align: center;
+
+    hr {
+        width: 40%;
+    }
+
+    .service-cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px;
+
+        .service-card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 280px;
+            height: 350px;
+            margin: 20px;
+            background: darken($secondary-color, 50%);
+            border-radius: 10px;
+
+            .content {
+                padding: 30px;
+                text-align: center;
+
+                .service {
+                    max-width: 60px;
+                    height: auto;
+                }
+
+                p {
+                    color: $light-color;
+                    padding: 20px 0;
+                }
+
+                .user {
+                    max-width: 80px;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    color: $primary-color;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+
+                }
+            }
+        }
+
+        
+    }  
 }
 
 
