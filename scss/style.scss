@@ -112,7 +112,7 @@ body {
   }
   
   #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 2.5rem;
   }
   
   #footer {
@@ -213,6 +213,93 @@ body {
         }
     }
 }
+
+#testimonials {
+
+    text-align: center;
+
+    hr {
+        width: 40%;
+    }
+
+    .testimonial-cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px;
+
+        .testimonial-card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 480px;
+            margin: 20px;
+            background: darken($secondary-color, 50%);
+            border-radius: 10px;
+
+            .content {
+                padding: 30px;
+                text-align: center;
+
+                .quote {
+                    max-width: 60px;
+                    height: auto;
+                }
+
+                p {
+                    color: $light-color;
+                    padding: 20px 0;
+                }
+
+                .user {
+                    max-width: 80px;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    color: $primary-color;
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+
+                }
+            }
+        }
+
+        
+    }  
+
+    
+}
+
+#about {
+    
+    text-align: center;
+
+    hr {
+        width: 40%;
+    }
+
+    .personal-pic {
+        width: 80%;
+        border-radius: 30px;
+
+    }
+
+    .about-paragraph {
+        padding: 0px 20px;
+    }
+
+    .content {
+        padding-bottom: 10px;
+    }
+}
+
+
 
 
 @import 'buttons';

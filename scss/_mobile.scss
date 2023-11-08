@@ -105,7 +105,22 @@
             font-size: 10px;
         }
     }
+
+    #about {
     
+        .personal-pic {
+            width: 100%;
+            border-radius: 30px;
+        }
+    
+    }
+}
 
+@media (max-width: 1140px) {
+    #testimonials {
 
+        .testimonial-cards {
+            justify-content: center;
+        }
+    }
 }
