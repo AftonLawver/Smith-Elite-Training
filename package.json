@@ -4,14 +4,17 @@
   "description": "![Logo of the Project](/img/banner.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tailwindcss -i input.css -o css/main.css",
-    "watch": "npx tailwindcss -i input.css -o css/main.css --watch"
+    "dev": "nodemon server.js"
+
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
   }
 }
