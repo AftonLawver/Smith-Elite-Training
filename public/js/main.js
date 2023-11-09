@@ -6,6 +6,13 @@ const closeMenu = function() {
     sidemenu.style.top = "-300px";
 }
 
+const submitButton = document.getElementById('sendInquiryButton');
+submitButton.addEventListener("click", e => {
+  e.preventDefault();
+  const data = getFormData();
+  console.log(data);
+})
+
 function validateName() {
     const nameInput = document.getElementById('nameInput');
     if (!nameInput.value.match(/^(?=.{1,40}$)[a-zA-Z]+(?:[-'\s][a-zA-Z]+)*$/)) {
@@ -38,4 +45,11 @@ function validateName() {
       phoneNumberErrorMessage.style.display = "none";
       return true;
     }
+  }
+
+  const getFormData = function() {
+    const name = document.getElementById('nameInput').value;
+    const phone = document.getElementById('phoneNumberInput').value;
+    const message = document.getElementById('formTextArea').value;
+    return {name: name, phone: phone, message: message};
   }
