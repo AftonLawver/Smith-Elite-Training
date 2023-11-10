@@ -6,6 +6,7 @@ const PORT = process.env.PORT;
 const DB_URI = process.env.DB_URI;
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const twilioClient = require('twilio')(process.env.accountSid, process.env.authToken);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -19,6 +20,10 @@ const db = mongoose.connection;
 
 db.on('error', ()=> {console.log("Error connecting to Database.")});
 db.once('open', ()=> {console.log("Connected to Database.")});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '/index.html'));
+})
 
 app.post('/submit', (req, res) => {
     let data = req.body;
@@ -34,10 +39,25 @@ app.post('/submit', (req, res) => {
     });
 })
 
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/index.html'));
-})
+app.post('/sendText', async (req, res) => {
+    let data = req.body;
+    let name = data["name"];
+    let phone = data["phone"];
+    let message = data["message"];
+  
+    let messageBody = `New inquiry for Smith Elite Training!
+    \nName: ${name}\nPhone: ${phone}\nMessage: ${message}`
+  
+    // send text from twilio
+    twilioClient.messages
+        .create({
+          body:
+             messageBody,
+          from: process.env.phoneSender,
+          to: process.env.phoneRecipient,
+        })
+        .then(message => console.log("Text message sent."));
+  });
 
 app.listen(PORT, err => {
     if (err) {
