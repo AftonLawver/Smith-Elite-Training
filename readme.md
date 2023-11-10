@@ -5,7 +5,7 @@
 
 # Smith Elite Training
 
-![Video of the Project]()
+![Video of the Project](public/video/smith-elite-training.gif)
 
 ### Description
 - Website for a Personal Trainer - Javen Smith located in Southern Wisconsin.
