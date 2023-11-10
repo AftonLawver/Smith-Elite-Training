@@ -9,8 +9,32 @@ const closeMenu = function() {
 const submitButton = document.getElementById('sendInquiryButton');
 submitButton.addEventListener("click", e => {
   e.preventDefault();
-  const data = getFormData();
-  console.log(data);
+  if (validateForm()) {
+    const data = getFormData();
+
+    const headers = {
+      'Content-Type': 'application/json'
+    };
+
+    const fetchOptions = {
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(data)
+    };
+
+    fetch('/submit', fetchOptions)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Post request failed.");
+      }
+      else {
+        window.location.href = '/form_submission_success.html';
+      }
+    })
+    
+  }
+  
+  
 })
 
 function validateName() {
@@ -52,4 +76,13 @@ function validateName() {
     const phone = document.getElementById('phoneNumberInput').value;
     const message = document.getElementById('formTextArea').value;
     return {name: name, phone: phone, message: message};
+  }
+
+  const validateForm = function() {
+    if (validateName && validatePhone) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
