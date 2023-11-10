@@ -54,9 +54,7 @@
                 &:hover {
                     color: lighten($primary-color, 10%);
                 }
-
             }
-            
         }
     }
 
@@ -84,10 +82,15 @@
     #contact {
         #inquiryForm {
             margin: 0px 1vw 10px 1vw;
+            font-size: 14px;
 
             #formTextArea {
                 width: 70%;
                 margin: 10px auto;
+            }
+
+            .error {
+                font-size: 12px;
             }
         }
     }
