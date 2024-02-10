@@ -16,7 +16,8 @@
 
 
 ### Features in Progress
-- None at the moment.
+- Add photos into gallery section.
+- Add credentials/certification on his website somewhere.
 
 
 
